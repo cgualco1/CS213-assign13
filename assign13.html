@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CG University Arts Department">
+    <link rel="stylesheet" href="assign13.css">
+    <script src="assign13.js"></script>
+    <title>Music Festival Registration</title>
+</head>
+<body onload="pageLoad()">
+    <main>
+        <header class="header">
+            <div id="top">
+                <img src="CG_University.png" alt="CG University">
+            
+                <span id="nav">
+                    <a class="active" href="cguniversity.home.html">University</a>
+                    <a href="cguniversity.academics.html">Academics</a>
+                    <a href="cguniversity.athletics.html">Athletics</a>
+                    <a href="cguniversity.arts.html">Arts</a>
+                    <a href="#contact">Contact Us</a>
+                  </span>
+            </div>   
+        </header>
+        <h1>Spring Music Festival Registration</h1>
+        <div id="body">
+            <form name="myForm" id="myForm">
+                <div id="check">
+                    <div id="type">
+                        <h3>Performance Type</h3><hr>
+                        <input type="radio" id="solo" name="performance" value="solo" onclick="hide()">
+                        <label for="solo">Solo</label><br>
+                        <input type="radio" id="duet" name="performance" value="duet" onclick="show()">
+                        <label for="duet">Duet</label><br>
+                        <input type="radio" id="concerto" name="performance" value="concerto" onclick="hide()">
+                        <label for="concerto">Concerto</label><br>
+                        <div id="typeWarning"></div>
+                    </div>
+                    <div id="skill">
+                        <h3>Performers Skill Level</h3><hr>
+                        <input type="radio" id="beginner" name="skill" value="beginner">
+                        <label for="beginner">Beginner</label><br>
+                        <input type="radio" id="intermediate" name="skill" value="intermediate">
+                        <label for="intermediate">Intermediate</label><br>
+                        <input type="radio" id="pre-advanced" name="skill" value="pre-advanced">
+                        <label for="pre-advanced">Pre-Advanced</label><br>
+                        <input type="radio" id="advanced" name="skill" value="Advanced">
+                        <label for="advanced">Advanced</label><br>
+                        <div id="skillWarning"></div>
+                    </div>
+                    <div id="instrument">
+                        <h3>Performers Instrument</h3><hr>
+                        <input type="radio" id="piano" name="instrument" value="piano">
+                        <label for="piano">Piano</label><br>
+                        <input type="radio" id="voice" name="instrument" value="voice">
+                        <label for="voice">Voice</label><br>
+                        <input type="radio" id="string" name="instrument" value="string">
+                        <label for="string">String</label><br>
+                        <input type="radio" id="organ" name="instrument" value="organ">
+                        <label for="organ">Organ</label><br>
+                        <input type="radio" id="other" name="instrument" value="other">
+                        <label for="other">Other</label><br>
+                        <div id="InstWarning"></div>
+                    </div>
+                </div>
+                <div id="student_1">
+                    <h3>Performers Information</h3><hr>
+                    <label class="label" for="first_name"><b>First Name</b></label><br>
+                    <input type="text" class="text" id ="first_name" name="first_name" oninput="ValidateFisrtName()"><br>
+                    <div id="fname1Warning" class="warning"></div>
+                    <label class="label" for="last_name"><b>Last Name</b></label><br>
+                    <input type="text" class="text" id="last_name" name="last_name" oninput="ValidateLastName()"><br>
+                    <div id="lname1Warning" class="warning"></div>
+                    <label class="label" for="student_id"><b>Student ID Number</b></label><br>
+                    <input type="text" class="text" id="student_id" name="student_id" oninput="ValidateID()">
+                    <div id="id1Warning" class="warning"></div>
+                </div>
+                <div id="student_2"  class="hidden">
+                    <h3>2nd Performers Information</h3><hr>
+                    <label class="label" for="first_name_2"><b>First Name</b></label><br>
+                    <input type="text" id="first_name_2" name="first_name_2" oninput="ValidateFisrtName2()"><br>
+                    <div id="fname2Warning" class="warning"></div>
+                    <label class="label" for="last_name_2"><b>Last Name</b></label><br>
+                    <input type="text" id="last_name_2" name="last_name_2" oninput="ValidateLastName2()"><br>
+                    <div id="lname2Warning" class="warning"></div>
+                    <label class="label" for="student_id_2"><b>Student ID Number</b></label><br>
+                    <input type="text" id="student_id_2" name="student_id_2" oninput="ValidateID2()">
+                    <div id="id2Warning" class="warning"></div>
+                </div>
+                <div id="location">
+                    <h3>Performance Location</h3><hr>
+                    <label class="label" for="building"><b>Building</b></label><br>
+                    <input type="text" id="building" name="locaition" oninput="ValidateBuilding()"><br>
+                    <div id="buildingWarning" class="warning"></div>
+                    <label class="label" for="room"><b>Room Number</b></label><br>
+                    <input type="text" id="room" name="room" oninput="ValidateRoom()">
+                    <div id="roomWarning" class="warning"></div>
+                </div>
+                <div id="timeSlot">
+                    <h3>Time Slot</h3><hr>
+                    <label class="label" for="time"><b>Prefered Time_Slot</b></label><br>
+                    <input type="text" id="time" name="time_slot" oninput="ValidateTime()">
+                    <select id="suffex" name="time">
+                        <option value="am">AM</option>
+                        <option value="pm">PM</option>
+                    </select>
+                    <div id="timeWarning" class="warning"></div>
+                </div>
+                <div id="button">
+                    <button type="button" id="btn1" class="btn" name="validte" onclick="checkSelection()">Register</button>
+                    <button type="reset" id=btn2 class="btn reset" name="clear" onclick="ClearForm()">Clear</button>
+                </div>
+            </form>
+            <table id="display">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Student ID</th>
+                    <th>Partners First Name</th>
+                    <th>Partners Last Name</th>
+                    <th>Partners Student ID</th>
+                    <th>Type</th>
+                    <th>Skill Level</th>
+                    <th>Instrument</th>
+                    <th>Building</th>
+                    <th>Room</th>
+                    <th>Time</th>
+                    <th>AM/PM</th>
+                </tr>
+                <tbody id="myTable">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div id="contact">
+            <h1>Contact Information</h1>
+            <ul>
+                <li>1111 Fake Street, My Town, USA</li>
+                <li>777-666-5151</li>
+                <li>cguniversity@universitymail.com</li>
+            </ul>
+            </div>
+      
+        <div id="follow">
+            <h1>Follow Us At</h1>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+            </div>
+      
+        <div id="help">
+            <h1>Support Services</h1>
+            <ul>
+                <li><a href="#">Technical Support</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

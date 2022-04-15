@@ -1,0 +1,478 @@
+body{
+    margin: 0;
+}
+
+header,
+main {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    background: whitesmoke;
+    box-shadow: none;
+    min-height: 100vh;
+}
+
+/*************Top*******************************/
+header {
+    min-height: 150px;
+    background-color: rgb(18, 18, 214);
+    font-family: cursive;
+}
+
+#top img {
+    max-width: 120px;
+    height: auto;
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#nav a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 14px 16px;
+}
+
+#nav a:hover{
+    background-color: lightgray;
+    color: black;
+}
+
+/*************Main Content Home/University Page*******************************/
+.home_content{
+    display: grid;
+    grid-template-columns: .5fr 2fr 2fr;
+    grid-gap: 1rem;
+}
+
+.example_topic {
+    border: 5px solid gray;
+    border-radius: 0.5rem;
+    background-color: rgb(18, 18, 214);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px;
+    margin: 1rem;
+}
+
+.temp_image img{
+    max-width: 250px;
+    height: auto;
+}
+
+#home_sidebar{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#home_sidebar a {
+    color: white;
+}
+
+.mission{
+   grid-column: 1 / -1;
+   grid-row: 1;
+   padding: 1rem;
+   font-size: 1.5rem;
+   font-family: cursive;
+}
+
+.mission h1{
+    text-align: center;
+}
+
+.mission p{
+    border: 4px inset black;
+    padding: 10px;
+}
+
+.history {
+    margin: 1rem;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 1rem;
+    background-color: ivory;
+    box-shadow: 0 1rem 2rem gray;
+    font-family: "Andale Mono", monospace;
+    font-size: 1.2rem;
+}
+
+.history h1{
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+/*************Main Content Accademics Page************************************/
+.accademic_content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+#apply {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+input[type=text], 
+select, 
+textarea {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 1rem 1rem 1rem 0;
+    display: inline-block
+}
+
+input[type=submit] {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: darkgreen;
+}
+
+#apply {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 1rem 2rem gray;
+}
+
+#apply h1 {
+    padding: 2rem;
+}
+
+.example_review {
+    border: 5px solid gray;
+    border-radius: 0.5rem;
+    background-color: rgb(18, 18, 214);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px;
+    margin: 1rem;
+}
+
+.temp_image_2 img{
+    max-width: 200px;
+    height: auto;
+}
+
+.reviews {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reviews a{
+    text-decoration: none;
+    color: white;
+}
+
+.catalog {
+    margin: 1rem;
+    font-family: "Andale Mono", monospace;
+}
+
+/*************Main Content Athletics Page*************************************/
+.sports_content{
+    display: grid;
+    grid-template-columns: .5fr 2fr 2fr;
+    grid-gap: 1rem;
+}
+
+.example_sport {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px;
+    margin: 1rem;
+}
+
+.example_img img{
+    max-width: 300px;
+    height: auto;
+}
+
+#sports_sidebar{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#sports_sidebar a {
+    color: navy;
+}
+
+.sports_history {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.sports_history {
+    margin: 1rem;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 1rem;
+    background-color: ivory;
+    box-shadow: 0 1rem 2rem gray;
+    font-family: "Andale Mono", monospace;
+    font-size: 1.2rem;
+}
+
+.sports_history h1{
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+#support_sports {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 1rem;
+}
+/*************Main Content Arts Page*****************************************/
+.gallery img {
+    max-width: 200px;
+    height: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+}
+
+.gallery_img {
+    padding: 15px;
+    margin-top: 25px;
+    border: 2px inset gray;
+    margin-left: 20px;
+    border-color: ivory;
+}
+
+.art_content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+.events  {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 1rem;
+}
+
+.events ul {
+    list-style-type: none;
+    color: steelblue;
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+
+.art_history {
+    margin: 1rem;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 1rem;
+    background-color: ivory;
+    box-shadow: 0 1rem 2rem gray;
+    font-family: "Andale Mono", monospace;
+    font-size: 1.2rem;
+}
+
+.art_history h1{
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+#support_arts {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 1rem;
+    background-color: silver;
+    border-radius: 2rem;
+    padding: 10px;
+}
+
+/*************Footer*********************************************************/
+footer{
+    position: sticky;
+    bottom: 0;
+    background: grey;
+    padding: 20px;
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    justify-content: center;
+}
+
+footer h1{
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(18, 18, 214);
+}
+
+footer ul {
+    list-style-type: none;
+    font-size: 25px;
+    line-height: 200%;
+    color: aliceblue;
+}
+
+footer ul a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/*************screen size adjustments**************************************/
+@media only screen and (min-width: 600px) {
+    main{
+        box-shadow: 0 2rem 4rem #000;
+    }
+
+    #nav {
+        clear: both;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    } 
+}
+
+@media only screen and (min-width: 900px) {
+    footer{
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .history {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+    
+    .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+    }
+
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #sports_sidebar{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 1300px) {
+    .history {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        grid-column: 2 / -1;
+        grid-row: 2;
+    }
+
+    .mission {
+        grid-column: 2 / -1;
+        grid-row: 1;
+    }
+
+    #home_sidebar {
+        grid-column: span 1;
+        grid-row: 1 / span 2; 
+    }
+
+    .reviews {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    .catalog {
+        grid-column: 3 / span 4;
+        grid-row: 1 / span 2;
+    }
+
+    #apply {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    #sports_sidebar{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-column: span 1;
+        grid-row: 1 / span 2;
+    }
+
+    .sports_history {
+        grid-column: 2 / -1;
+        grid-row: 2;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+
+    #support_sports {
+        grid-column: 2 / -1;
+        grid-row: 1;
+    }
+
+    .art_history {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 3;
+        margin-top: 150px;
+    }
+
+    .events {
+        grid-column: 3 / -1;
+        grid-row: 1;
+        margin-top: 150px;
+    }
+
+    #support_arts {
+        grid-column: 3 / -1;
+        grid-row: 2;
+        margin-top: 200px;
+    }
+}

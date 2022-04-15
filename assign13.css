@@ -1,0 +1,216 @@
+body{
+    margin: 0;
+}
+
+header,
+main {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    background: whitesmoke;
+    box-shadow: none;
+    min-height: 100vh;
+}
+
+/*************Top*******************************/
+header {
+    min-height: 150px;
+    background-color: rgb(18, 18, 214);
+    font-family: cursive;
+}
+
+#top img {
+    max-width: 120px;
+    height: auto;
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#nav a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 14px 16px;
+}
+
+#nav a:hover{
+    background-color: lightgray;
+    color: black;
+}
+
+/*************Main Content Home/University Page*******************************/
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+hr {
+    width: 80%;
+}
+
+#body {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 10px;
+}
+
+#myForm {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    margin: 25px;
+}
+
+.hidden {
+    display: none;
+}
+
+#myForm input[type=text] {
+    width: 75%;
+    font-size: 20px;
+    border: 1px solid black;
+} 
+
+select {
+    font-size: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+#btn1, #btn2 {
+    width: 45%;
+}
+
+.btn {
+    background-color: rgb(18, 18, 214);;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+    
+.btn:hover {
+    box-shadow: 5px 5px rgb(170, 168, 168);
+    color: white;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border: none;
+    margin: 25px;
+}
+
+td {
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+
+
+/*************Footer*********************************************************/
+footer{
+    position: sticky;
+    bottom: 0;
+    background: grey;
+    padding: 20px;
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    justify-content: center;
+}
+
+footer h1{
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(18, 18, 214);
+}
+
+footer ul {
+    list-style-type: none;
+    font-size: 25px;
+    line-height: 200%;
+    color: aliceblue;
+}
+
+footer ul a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/*************screen size adjustments**************************************/
+@media only screen and (min-width: 600px) {
+    main{
+        box-shadow: 0 2rem 4rem #000;
+    }
+
+    #nav {
+        clear: both;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    } 
+}
+
+@media only screen and (min-width: 900px) {
+    footer{
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    #myForm {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    #check {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #student_1 {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    #location {
+        grid-column: 1 / 2;
+        grid-row: 3;
+    }
+    
+    #timeSlot {
+        grid-column: 2 / -1;
+        grid-row: 3; 
+    }
+    #button {
+        grid-column: 1 / -1;
+        grid-row: 4;  
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    #body {
+        display: grid;
+        grid-template-columns: 2fr auto;
+    }
+}
